@@ -8,6 +8,12 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <!-- jQuery library (served from Google) -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <!-- bxSlider Javascript file -->
+    <script src="assets/bxslider/jquery.bxslider.min.js"></script>
+    <!-- bxSlider CSS file -->
+    <link href="assets/bxslider/jquery.bxslider.css" rel="stylesheet"/>
 </head>
 <body>
 
@@ -20,7 +26,16 @@
             e.style.display = 'block';
     }
 </script>
-
+<script>
+    $(document).ready(function () {
+        $('.slider').bxSlider({
+            slideWidth: 300,
+            minSlides: 1,
+            maxSlides: 3,
+            slideMargin: 5
+        });
+    });
+</script>
 <section class="page-header">
     <h1 class="project-name">IoT Website<br></h1>
     <h2 class="project-tagline"></h2>
@@ -468,7 +483,7 @@
                                 </li>
                                 <li class="no-counter">Questions
                                     <ul>
-                                        <li class="no-counter">Can my SDD project <em>be</em> my IPT  project?</li>
+                                        <li class="no-counter">Can my SDD project <em>be</em> my IPT project?</li>
                                         <li class="no-counter">What specific media content is required?</li>
                                         <li class="no-counter">How does audio work on a website?</li>
                                     </ul>
@@ -482,7 +497,137 @@
                     </ul>
                 </li>
                 <li id="5_2"><h3>Personal Log Book</h3>
-                    <!-- TODO do this -->
+                    <div class="slider">
+                        <div class="slide">
+                            <h4>20th Jan 2016</h4>
+                            <br/>
+                            Started to think up of ideas for the website storyboard.
+                            <br/>
+                            I'm thinking of a clean blue/white glyphicon-y interface.
+                        </div>
+                        <div class="slide">
+                            <h4>27th Jan 2016</h4>
+                            <br/>
+                            Started preparing the video to advertise Sense.
+                            <br/>
+                            I don't particularly want a voice over, but i'll do some captions and music.
+                        </div>
+                        <div class="slide">
+                            <h4>3rd Feb 2016</h4>
+                            <br/>
+                            Finished the video storyboard.
+                        </div>
+                        <div class="slide">
+                            <h4>10th Feb 2016</h4>
+                            <br/>
+                            Decided on the colours for the website after *extensive* research. Blue/white it is!
+                        </div>
+                        <div class="slide">
+                            <h4>17th Feb 2016</h4>
+                            <br/>
+                            Set up Pycharm for web dev. This involved more work than I thought it would...
+                        </div>
+                        <div class="slide">
+                            <h4>24th Feb 2016</h4>
+                            <br/>
+                            Started editing the Bootstrap stuff.
+                        </div>
+                        <div class="slide">
+                            <h4>2nd Mar 2016</h4>
+                            <br/>
+                            Didn't have a chance to do much this week due to assessment week, but progress is moving
+                            smoothly.
+                        </div>
+                        <div class="slide">
+                            <h4>9th Mar 2016</h4>
+                            <br/>
+                            Started filming the video! I'm using a webcam because I don't have access to any good
+                            cameras :(
+                        </div>
+                        <div class="slide">
+                            <h4>16th Mar 2016</h4>
+                            <br/>
+                            Finished filming of the video. Now for the editing...
+                        </div>
+                        <div class="slide">
+                            <h4>23nd Mar 2016</h4>
+                            <br/>
+                            Decided which editing software I was going to use.
+                            <br/>
+                            I chose kdenlive for Ubuntu, because I want to do it in Ubuntu.
+                            <br/>
+                            It's going to make it harder, but more fun!
+                        </div>
+                        <div class="slide">
+                            <h4>30th Mar 2016</h4>
+                            <br/>
+                            Started editing the video (finally)
+                        </div>
+                        <div class="slide">
+                            <h4>6th Apr 2016</h4>
+                            <br/>
+                            Continued to edit the video. I've done the first half and I'm picking out which footage I
+                            want.
+                        </div>
+                        <div class="slide">
+                            <h4>13th Apr 2016</h4>
+                            <br/>
+                            Finished the video! Yayyy
+                            <br/>
+                            Now on to the fun stuff
+                        </div>
+                        <div class="slide">
+                            <h4>20th Apr 2016</h4>
+                            <br/>
+                            Continued on the web storyboard - video uploaded to YouTube in the background.
+                        </div>
+                        <div class="slide">
+                            <h4>27th Apr 2016</h4>
+                            <br/>
+                            Finished the storyboard. Started to write some HTML (finally).
+                        </div>
+                        <div class="slide">
+                            <h4>4th May 2016</h4>
+                            <br/>
+                            Learnt some jQuery for element fluidity - jQuery is fantastic, I'll definitely be using it
+                            more after this.
+                        </div>
+                        <div class="slide">
+                            <h4>11th May 2016</h4>
+                            <br/>
+                            Continued to code the website. Embedded the video.
+                        </div>
+                        <div class="slide">
+                            <h4>18th May 2016</h4>
+                            <br/>
+                            Created the update log section, which took me a while but was very rewarding.
+                        </div>
+                        <div class="slide">
+                            <h4>25th May 2016</h4>
+                            <br/>
+                            Created the fluid page transitions and links. Sp00ky jQuery stuff!
+                        </div>
+                        <div class="slide">
+                            <h4>1st Jun 2016</h4>
+                            <br/>
+                            Finalised most of the textual content.
+                        </div>
+                        <div class="slide">
+                            <h4>8th Jun 2016</h4>
+                            <br/>
+                            Finalised the site.
+                        </div>
+                        <div class="slide">
+                            <h4>15th Jun 2016</h4>
+                            <br/>
+                            Put the site online - D
+                        </div>
+                        <div class="slide">
+                            <h4>17th Jun 2016</h4>
+                            <br/>
+                            Handed in link to the site.
+                        </div>
+                    </div>
                 </li>
             </ol>
         </li>
