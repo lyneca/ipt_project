@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="UTF-8">
+    <title>IoT Website by lyneca</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+</head>
+<body>
+
+<script type="text/javascript">
+    function toggle_visibility(id) {
+        var e = document.getElementById(id);
+        if (e.style.display == 'block')
+            e.style.display = 'none';
+        else
+            e.style.display = 'block';
+    }
+</script>
+
+<section class="page-header">
+    <h1 class="project-name">IoT Website<br></h1>
+    <h2 class="project-tagline"></h2>
+</section>
+
+<section class="main-content">
+    <h1>
+        <a id="iot" class="anchor" href="#iot" aria-hidden="true"><span aria-hidden="true"
+                                                                        class="octicon octicon-link"></span></a>IoT</h1>
+
+    <p>This is the documentation for the IPT marketing project hosted <a href="index.html">here</a>.</p>
+
+    <p><strong>
+        Here is the original assessment notification parts <a href="assets/pdf/not_1.pdf">one</a> and
+        <a href="assets/pdf/not_2.pdf">two</a>, and here is the
+        <a href="https://boardofstudies.nsw.edu.au/syllabus_hsc/ipt-specifications.html">
+            IPT course specification
+        </a>.</strong>
+    </p>
+
+    <h2 id="top">Contents</h2>
+    <ol>
+        <li><a href="#1">Understanding the Problem</a>
+            <ol>
+                <li><a href="#1_1">Requirement Report</a>
+                    <ol>
+                        <li><a href="#1_1_1">Introduction</a></li>
+                        <li><a href="#1_1_2">System Requirements</a></li>
+                    </ol>
+                </li>
+            </ol>
+        </li>
+        <li><a href="#2">Planning</a>
+            <ol>
+                <li><a href="#2_1">Feasibility Study</a>
+                    <ol>
+                        <li><a href="#2_1_1">Alternative I</a></li>
+                        <li><a href="#2_1_2">Alternative II</a></li>
+                    </ol>
+                </li>
+                <li><a href="#2_2">Justification of the Chosen Solution</a></li>
+                <li><a href="#2_3">Project Scheduling</a></li>
+            </ol>
+        </li>
+        <li><a href="#3">Designing</a>
+            <ol>
+                <li><a href="#3_1">Tools Used in Designing</a></li>
+                <li><a href="#3_2">Alpha Prototype</a></li>
+            </ol>
+        </li>
+        <li><a href="#5">Communication</a>
+            <ol>
+                <li><a href="#5_1">Project Meeting Agenda</a></li>
+                <li><a href="#5_2">Personal Log Book</a></li>
+            </ol>
+        </li>
+        <li><a href="#6">Appendices</a>
+            <ol>
+                <li><a href="#6_1">Scheduling</a></li>
+                <li><a href="#6_2">Design Tools</a>
+                    <ol>
+                        <li><a href="#6_2_1">Context Diagram</a></li>
+                        <li><a href="#6_2_2">Data Flow Diagram</a></li>
+                        <li><a href="#6_2_3">Decision Tree</a></li>
+                        <li><a href="#6_2_4">Decision Table</a></li>
+                        <li><a href="#6_2_5">Data Dictionary</a></li>
+                        <li><a href="#6_2_6">Storyboard</a></li>
+                    </ol>
+                </li>
+            </ol>
+        </li>
+    </ol>
+    <ol>
+        <li id="1"><h2>Understanding the Problem</h2>
+            <ol>
+                <li id="1_1"><h3>Requirement Report</h3>
+                    <ol>
+                        <li id="1_1_1"><h4>Introduction</h4>
+                            <ol>
+                                <li><h4>System Purpose</h4>
+                                    <p>
+                                        The system will be an information hub and customer feedback site for my Software
+                                        Design & Development project, which is a data organiser for a set of
+                                        home-designed sensor boards.
+                                    </p>
+                                </li>
+                                <li><h4>Needs of the Users</h4>
+                                    <p>
+                                        The system addresses the needs for communication and viewing and obtaining of
+                                        the software as an all in one source of information.
+                                    </p>
+                                </li>
+                                <li><h4>System Scope</h4>
+                                    <p>
+                                        The system will:
+                                    </p>
+                                    <ul>
+                                        <li class="no-counter">Provide information about the product.</li>
+                                        <li class="no-counter">Show examples of the product.</li>
+                                        <li class="no-counter">
+                                            Provide media involving the product, such as photos or trailers.
+                                        </li>
+                                    </ul>
+                                    <p>
+                                        The system will not:
+                                    </p>
+                                    <ul>
+                                        <li class="no-counter">Allow for interaction between users.</li>
+                                        <li class="no-counter">
+                                            Allow for inbuilt real-time chat with the developers.
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><h4>Participant Characteristics</h4>
+                                    <p>User:</p>
+                                    <ul>
+                                        <li class="no-counter">
+                                            Can use the website and read information on the project
+                                        </li>
+                                        <li class="no-counter">Can download the project</li>
+                                        <li class="no-counter">Can send feedback on the project if downloaded</li>
+                                        <li class="no-counter">Can question the developers</li>
+                                        <li class="no-counter">Has all the permissions of the Viewer</li>
+                                    </ul>
+                                    <p>Developer</p>
+                                    <ul>
+                                        <li class="no-counter">Can push to the download server</li>
+                                        <li class="no-counter">Has all the permissions of the User</li>
+                                    </ul>
+                                </li>
+                            </ol>
+                        </li>
+                        <li id="1_1_2"><h4>System Requirements</h4>
+                            <ol>
+                                <li><h4>Technical</h4>
+                                    <p>
+                                        To use this system you will need a modern web browser with HTML5 support, such
+                                        as:
+                                    </p>
+                                    <ul>
+                                        <li class="no-counter">Chrome</li>
+                                        <li class="no-counter">Firefox</li>
+                                        <li class="no-counter">Vivaldi</li>
+                                        <li class="no-counter"><em>Recent</em> versions of Internet Explorer</li>
+                                        <li class="no-counter">Chromium</li>
+                                        <li class="no-counter">Any other modern browser</li>
+                                    </ul>
+                                    <p>
+                                        The website will be completely mobile friendly and adaptive to screen size.
+                                    </p>
+                                </li>
+                                <li><h4>Security</h4>
+                                    <p>
+                                        Every connection to the website will be forced HTTPS, for a level of SSL/TLS
+                                        security.
+                                    </p>
+                                    <p>
+                                        To upload code to the GitHub repository for any of the projects, you are
+                                        required to have either my GitHub password or one of my SSH keys. Other people
+                                        are still able to contribute without this via GitHub's Pull Requests.
+                                    </p>
+                                </li>
+                                <li><h4>Data and Information</h4>
+                                    <p>
+                                        No user data will be stored; all contact between developer and user will happen
+                                        directly through the browser's email client.
+                                    </p>
+                                </li>
+                            </ol>
+                        </li>
+                    </ol>
+                </li>
+            </ol>
+        </li>
+        <li id="2"><h2>Planning</h2>
+            <ol>
+                <li id="2_1"><h3>Feasibility Study</h3>
+                    <ol>
+                        <li id="2_1_1"><h4>Alternative I</h4>
+                            <p>
+                                A website that advertises the sensor board software and allows for downloading, user
+                                responses and contact information along with tutorials and documentation for controlling
+                                and reprogramming the boards themselves.
+                            </p>
+                            <ol>
+                                <li><h4>Constraints</h4>
+                                    <ol>
+                                        <li><h4>Economic</h4>
+                                            <p>The website will not have a cost associated with it, and the software
+                                                download will be free and open source.
+                                            </p>
+                                        </li>
+                                        <li><h4>Technical</h4>
+                                            <p>
+                                                The technical skills required for the construction of the design website
+                                                are already known to me - HTML5 and CSS3, along with some JavaScript and
+                                                knowledge of Bootstrap.
+                                            </p>
+                                        </li>
+                                        <li><h4>Scheduling</h4>
+                                            <p>
+                                                The project will fit in with all the time requirements., as per the
+                                                Gantt chart in section <a href="#6_1">6.1</a>.
+                                            </p>
+                                        </li>
+                                        <li><h4>Operational</h4>
+                                            <p>
+                                                The website will be easy to maintain.
+                                            </p>
+                                        </li>
+                                    </ol>
+                                </li>
+                                <li><h4>Advantages and Disadvantages</h4>
+                                    <p>Advantages</p>
+                                    <ul>
+                                        <li class="no-counter">Easy to build</li>
+                                        <li class="no-counter">Low skill level</li>
+                                        <li class="no-counter">Adequately and wholly solves the problem</li>
+                                        <li class="no-counter">Allows for user interaction</li>
+                                        <li class="no-counter">Allows for multimedia</li>
+                                    </ul>
+                                    <p>Disadvantages</p>
+                                    <ul>
+                                        <li class="no-counter">Needs a backend for data storage</li>
+                                    </ul>
+                                </li>
+                            </ol>
+                        </li>
+                        <li id="2_1_2"><h4>Alternative II</h4>
+                            <p>
+                                A set of tutorial videos that explain the software product, the hardware and the API for
+                                controlling and receiving data from the boards.
+                            </p>
+                            <ol>
+                                <li><h4>Constraints</h4>
+                                    <ol>
+                                        <li><h4>Economic</h4>
+                                            <p>
+                                                The project will not have a cost associated with it (except for the cost
+                                                of the tools I decide to use, if any)
+                                            </p>
+                                        </li>
+                                        <li><h4>Technical</h4>
+                                            <p>
+                                                The project will require skills I do not currently have, mainly that of
+                                                video editing and writing/performing voiceover scripts. These skills
+                                                require time to learn and practise.
+                                            </p>
+                                        </li>
+                                        <li><h4>Scheduling</h4>
+                                            <p>
+                                                Video editing generally takes a longer time frame, and so does recording
+                                                takes and rewriting. The prototype may not be completed in time for the
+                                                due date.
+                                            </p>
+                                        </li>
+                                        <li><h4>Operational</h4>
+                                            <p>
+                                                The video cannot be maintained and therefore will not be maintained.
+                                            </p>
+                                        </li>
+                                    </ol>
+                                </li>
+                                <li><h4>Advantages and Disadvantages</h4>
+                                    <p>Advantages</p>
+                                    <ul>
+                                        <li class="no-counter">Easy to maintain</li>
+                                    </ul>
+                                    <p>Disadvantages</p>
+                                    <ul>
+                                        <li class="no-counter">Will take more time</li>
+                                        <li class="no-counter">Will take more skills than I have available</li>
+                                    </ul>
+                                </li>
+                            </ol>
+                        </li>
+                    </ol>
+                </li>
+                <li id="2_2"><h3>Justification of the Chosen Solution</h3>
+                    <p>
+                        I chose the first solution because of the comparatively large benefits, and the ease of
+                        creation.
+                    </p>
+                </li>
+                <li id="2_3"><h3>Project Scheduling</h3>
+                    <p>See section <a href="#6_1">6.1</a> for a Gantt Chart.</p>
+                </li>
+            </ol>
+        </li>
+        <li id="3"><h2>Designing</h2>
+            <ol>
+                <li id="3_1"><h3>Tools Used in Designing</h3>
+                    <p>See section <a href="#6_2">6.2</a> for modelling tools and diagrams.</p>
+                </li>
+                <li id="3_2"><h3>Alpha Prototype</h3>
+                    <p>An alpha prototype was submitted with Part I of this documentation.</p>
+                </li>
+            </ol>
+        </li>
+        <li id="4"><h2>Testing, Evaluating and Maintaining</h2>
+            <ol>
+                <li id="4_1"><h3>Methods of testing conducted</h3>
+                    <ol>
+                        <li><h4>Volume data</h4>
+                            <p>
+                                To simulate volume data I created a bot that repetitively "sent feedback" through the
+                                site many times per second. This was to test if the script that sends feedback worked
+                                at more than it's intended capacity.
+                            </p>
+                            <p>
+                                The results of this test were positive - because the script is client side, there will
+                                not be any negative effects on the service.
+                            </p>
+                        </li>
+                        <li><h4>Simulated data</h4>
+                            <p>
+                                Because the project is hosted by GitHub, it would probably not be a very good idea to
+                                try to DDoS it; this would most likely be resolved by the removal of my GitHub account.
+                            </p>
+                            <p>
+                                Hence, I wrote another bot to request from the server at a <em>gentle</em> rate of
+                                around 1 request per second. This test also returned expected and positive results.
+                            </p>
+                        </li>
+                        <li><h4>Live data</h4>
+                            <p>
+                                To test live data, I handed the link to the page around and asked people to go view the
+                                page as if they were a company who might want to buy Sense. Many of the people used the
+                                "sent feedback" option; which helped me test the script I had written with real expected
+                                input.
+                            </p>
+                            <p>
+                                The results of this test were optimal.
+                            </p>
+                        </li>
+                    </ol>
+                </li>
+                <li><h3>Evaluation of the information system</h3>
+                    <p>
+                        To evaluate this system, I compared it with the original aims and objectives.
+                    </p>
+                    <table>
+                        <tr>
+                            <td>Aim/Objective</td>
+                            <td>In final solution</td>
+                        </tr>
+                        <tr>
+                            <td>Provides information about Sense</td>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <td>Shows examples of the product</td>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <td>Provides media involving the product</td>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <td>Allows for feedback to be sent to the developers</td>
+                            <td>Yes</td>
+                        </tr>
+                    </table>
+                    <p>
+                        Having met the original specifications, the project also does the following:
+                    </p>
+                    <ul>
+                        <li class="no-counter">Shows a log of Sense updates</li>
+                        <li class="no-counter">Provides external contact information</li>
+                        <li class="no-counter">Links to resources related to Sense</li>
+                    </ul>
+                </li>
+            </ol>
+        </li>
+        <li id="5"><h2>Communication</h2>
+            <ol>
+                <li id="5_1"><h3>Project Meeting Agenda</h3>
+                    <ul>
+                        <li><h4>Progress Meeting 1</h4><br/>
+                            <ul>
+                                <li class="no-counter">Work Completed
+                                    <ul>
+                                        <li class="no-counter">Started the prototype</li>
+                                        <li class="no-counter">Problems Encountered</li>
+                                    </ul>
+                                </li>
+                                <li class="no-counter">Questions
+                                    <ul>
+                                        <li class="no-counter">Can I link it in with SDD?</li>
+                                        <li class="no-counter">What web hosting options can I use (if any)?</li>
+                                        <li class="no-counter">What is "operational feasibility"?</li>
+                                        <li class="no-counter">
+                                            How do I talk about economic feasibility when there is no cost associated
+                                            with the
+                                            project?
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <p>
+                                All topics in the agenda were discussed and all questions I had were answered.
+                            </p>
+                        </li>
+                        <li><h4>Progress Meeting 2</h4><br/>
+                            <ul>
+                                <li class="no-counter">Work Completed
+                                    <ul>
+                                        <li class="no-counter">Prototype completed</li>
+                                    </ul>
+                                </li>
+                                <li class="no-counter">Problems Encountered
+                                    <ul>
+                                        <li class="no-counter">Confused about how to integrate SDD</li>
+                                    </ul>
+                                </li>
+                                <li class="no-counter">Questions
+                                    <ul>
+                                        <li class="no-counter">
+                                            Should I have live data from the sensors on the site?
+                                        </li>
+                                        <li class="no-counter">Should this <em>be</em> my software project?</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <p>
+                                All topics in the agenda were discussed and all questions I had were answered. It was
+                                decided that live data was not a good idea, and that it would be best to have this
+                                project as a separate marketing site for SDD.
+                            </p>
+                        </li>
+                        <li><h4>Progress Meeting 3</h4><br/>
+                            <ul>
+                                <li class="no-counter">Work Completed
+                                    <ul>
+                                        <li class="no-counter">Behind schedule</li>
+                                        <li class="no-counter">Have been focusing on SDD</li>
+                                    </ul>
+                                </li>
+                                <li class="no-counter">Questions
+                                    <ul>
+                                        <li class="no-counter">Can my SDD project <em>be</em> my IPT  project?</li>
+                                        <li class="no-counter">What specific media content is required?</li>
+                                        <li class="no-counter">How does audio work on a website?</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <p>
+                                All topics in the agenda were discussed and all questions I had were answered. I was
+                                whipped and told to get a move on.
+                            </p>
+                        </li>
+                    </ul>
+                </li>
+                <li id="5_2"><h3>Personal Log Book</h3>
+                    <!-- TODO do this -->
+                </li>
+            </ol>
+        </li>
+        <li id="6"><h2>Appendices</h2>
+            <ol>
+                <li id="6_1"><h3>Scheduling</h3>
+                    <img src="assets/img/docs/gantt.png">
+                </li>
+                <li id="6_2"><h3>Design Tools</h3>
+                    <ol>
+                        <li id="6_2_1"><h4>Context Diagram</h4>
+                            <div class="mxgraph" style="max-width:100%;background-color:#ffffff;"
+                                 data-mxgraph="{&quot;highlight&quot;:&quot;#0000ff&quot;,&quot;nav&quot;:true,&quot;edit&quot;:&quot;_blank&quot;,&quot;xml&quot;:&quot;&lt;mxfile userAgent=\&quot;Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.84 Safari/537.36\&quot; version=\&quot;5.5.1.6\&quot; editor=\&quot;www.draw.io\&quot; type=\&quot;google\&quot;&gt;&lt;diagram&gt;7VdNT+M8EP41PYLy0QTe426B3ctKSBVi9+jG08TC9VSOS8v+esbxpEkI7bIfiBeJHCr78dgz8/iZSTNJZ6vdFyvW1TeUoCdJJHeT9GKSJOdnOf164CEA0zQKQGmVDFDcAXP1ExhszTZKQj0wdIjaqfUQLNAYKNwAE9bidmi2RD30uhZl67ED5oXQY/RWSVdxWgmn5fGvoMqq9Rzn/4WVhSjuSosbw/4mSbpsnrC8Eu1ZnGhdCYnbHpReEq0WkU72o9VuBtpT29IW9l0dWN3HbcFwbMc3JCKX+SJe5FmR5IWYnmThhHuhN8zFTQ2WkCsA6bPjuN1DyxVIoo6naF2FJRqhLzv0c8MHeI8RzSq30jSMaQg75b73xj+8yWnmZ8bZB7/Um/pVb1k7Yd0nf8sEGDTeRYNdKcotOAEjW4tCi7pWRQDZJBxj8Q5mqNE2iaRR89BKSNHndZBVhmrc2IKtRlS2whW2BN42skn3d06lBLgCypP2cB2dRKdpHvGVcCm1JWJBC6fuhyEK1n25P2p/+jUqCr4zweWyprB64qBBL4gOaiTzQvlwHD35zMHUaBcorKSFW1jUysFYRFpTbfub3Fa0Pl+LhtYtdZehZPh8sA6YpEO3c5DVNGtY7xjNmNJtV+pxW6BVr8zPGXuO5QGJv8MYbX224J4Q9Pq07JXFtOzT/RUt+WvQwlfUo+UC7kHj+k24yZ5w86bUTEfUzNA4nwk5ohdPEt2spXD0/nyFVt001xe1am/5Xlo1q+1oqz6uEGrVcTJlX6ySk/95rx63nmuLpRUrAi9wazQK+SGif/q+byg/JqLkLD57VyIaN+qPP4x/KCCux7/rQul5PvzD+KYComn3MRPMuw/G9PIR&lt;/diagram&gt;&lt;/mxfile&gt;&quot;}"></div>
+                        </li>
+                        <li id="6_2_2"><h4>Data Flow Diagram</h4>
+                            <div class="mxgraph" style="max-width:100%;background-color:#ffffff;"
+                                 data-mxgraph="{&quot;highlight&quot;:&quot;#0000ff&quot;,&quot;nav&quot;:true,&quot;edit&quot;:&quot;_blank&quot;,&quot;xml&quot;:&quot;&lt;mxfile userAgent=\&quot;Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.84 Safari/537.36\&quot; version=\&quot;5.5.1.6\&quot; editor=\&quot;www.draw.io\&quot; type=\&quot;google\&quot;&gt;&lt;diagram&gt;3Vhbb+I6EP41PBYFEi59PPS2L1tVQqvuPq1MYhKrJhM5htDz6zt2xrmQwPZ0QVUPD8j+PBnPfP5mYhj4N5v9g2JZ8h0iLgdjL9oP/NvBeDyfTfHbAK8lEPheCcRKRCU0qoGl+JcT6My2IuJ5y1ADSC2yNhhCmvJQtzCmFBRtszXI9q4Zi92ONbAMmeyizyLSCaU1prQM/o2LOHE7j6bX5cqKhS+xgm1K+w3G/tp+yuUNc74o0TxhERQNyL9DWhUAejajzf6GS0Oto6187v7IahW34inFdvqBYOavgmkwC1be9DqYz67Iw47JLXFxC0UqgUWILrnacUWR61fHVq4VvFREYQ6LRG8kDkc4xAwzY7fZx0Yqw7WEIkyY0kOWpqCZFpD+NoZMijhFQ8nXGPqC4uBKc1JVT3IWosweOGy4Vq9oQg9MnJxIhSOP5kV9piNnkzTOMyCMkYziynVNJQ6IzXcyG3SYfearXGje4RMdodBxsigSXF9mLDQrBfLX5vYMHPmHHM17OHLV2+SoAs9K0qRD0o+8R3GX52XWpqWPFVfDTVamlyCFuk6HFO+e88h0nK6CImxnNAWlE4ghZfKuRhe2R3Gzo9fmju+F/tkY/zImw4mZpZiIWWpM7aqpco0V/Y/pvAikkJotLHYvTJ7WhqeRswgly3MRliCZ2GZhO8kNSFA2Ed+zn+pITV6nDxRpgK2yujihL4ws5q7Yewv1qDC8YTChnUgbV04IiktsZ7t2hH1KIOdPIDD2yrNzQ27d1DmA9TrHmA+FVEX4MW3Nuv2e77iE7FOqrqop4sCffGbdzbt1l0VM48UEN8I3/Nh7BDs7f/VRibn6a1Vfq/as3VepPhLb31VfMKK71kfL7bIFRcE1RLOEtS6QKUTru9QFJNNt2Dh74kpgOljNhzL6uk3c/SI4JSPb6Lsy+m+awUyZecoZZEZBtt77O3j1M8ddpg5v33+wp253zLy6cvWa46CM92xSdlfDhpYfeYFA1QY/89phLc3kUOL/p2545HX5bhl/+N03wmcPzv6St832+6462nJp9mU7Ff3mO3nEVgbnP2Kc1n8jlN2g/qvGv3sD&lt;/diagram&gt;&lt;/mxfile&gt;&quot;}"></div>
+                        </li>
+                        <li id="6_2_3"><h4>Decision Tree</h4>
+                            <div class="mxgraph" style="max-width:100%;background-color:#ffffff;"
+                                 data-mxgraph="{&quot;highlight&quot;:&quot;#0000ff&quot;,&quot;nav&quot;:true,&quot;edit&quot;:&quot;_blank&quot;,&quot;xml&quot;:&quot;&lt;mxfile userAgent=\&quot;Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.84 Safari/537.36\&quot; version=\&quot;5.5.1.6\&quot; editor=\&quot;www.draw.io\&quot; type=\&quot;google\&quot;&gt;&lt;diagram&gt;7Vtbk6o4EP41Pu4pkfEyjzqXsy+7dbasvZzHLERJTSRWwMvsrz8d6JZLBJmzg0zJ+GBBJ+mE/vpLumkduA+b41fNtsFvyudyMBr6x4H7OBiNZtMJfBvBayq4c4epYK2Fn4qcTLAU/3EUUred8HlU6BgrJWOxLQo9FYbciwsyprU6FLutlCzOumVrmjETLD0mbenfwo8DfKwRPpaR/8rFOqCZncl92vIv817WWu1CnG8wclfJJ23eMNKFDxoFzFeHnMh9ArNqpUCzudocH7g0piWzpeOeK1pP69Y8xLXVD5j4o+l45jPPZ87QHY5/QQ17Jndoi+8ARLrW+JXsE/MjqF8E8UaCwIHLKNbqhT8oqTRIQhVCz8VKSFkSMSnWIdx6sEAO8sWe61iA5efYsBG+b6ZZHAIR8+WWeWbOA7gZyBT0XsnEYAH04zBggQsGNRzd74wVEhGa4CtXGx7rV+hCA8g90V1HE7w/ZODfoSjI4U4oMnS39UlzZnK4QKs3ROCujwiMpiUEZh0iMLYQsMyfUJwbBcMyCkzHc7MFZRZPZM+ABHbnoU89PMmiSHipELvYYMIuMkw+pp8POxUuROk4UGsVMvmUSRfeTu+TpRlF6crNoHpk4OnUTidI12wL8CBrjsPOO66NsOaSxWJfnP9d8cJduV+MmdwXGQMe0h1jpp+MqdjGaxmTOG4XjJn1kTGz0invEhW6YAzGi5+MsbbxWsYkjtsFYxzEJwfY76p3URnRowvGOG5zhvCjiP/JXX83Xb6MEwrAOkxTShK4ydp6HLul7t0Jsex85/aJVQ7eOk04Hcx3PonVQoiXuncnxLLTotsnVjnG6/Q9goNp0SexWogEU/fuhFh29rQEBwfJ3PN4dPtvS+nAQI45Zw4vChzb55idSD2qQygV83sDCPD1IiAOWb91REhpnh6w3YDkmXPfFEhuHQ/3HlOVGjwoAGwfDruiM48AguEfOx7FQoU3T4+xi+dwHT3o7Wn7eKBv5PCA8qlYmQX/GXF9+y+uSy8VzsFBUVv7aNjZ57ddFCT1ZvjKHSVLDnGOvnVwptPLZ7szvho6DSpxufAWDVuJRSGwPQXA5q5p3GrbLWeXc2YhWeOoFGf4pgRMnJ3w9MMIgoU4RCrScBpH5ev9FxS5tEBSlMbclqIEutNj/ySaDapEHaNJB3h5i6L7hmg3B7ZyprcCW1Z0VWDthOiDAjuu4tG7A1s501uBLSu6KrANqlQfA9gJnVOtA1s501uBLSu6JrCUMH58YKdXA7ZyprcCW1Z0VWDtbO8vwQ+tBK6Sr4yGjxC23lN5tqZQebWo1bVLxSax6xkCZxIH2nXaR8DOsef+RoQCDMxisGS/oDhTA7lagu1igp0/WC7WFC5WSYZfIE/NCiVJ06lMgm1UKfmJX8xgj+JRVn3klXzgnYogtJXXVkHSTl1UQVw7N3/key7Vtm9b3bnfkU0wJfqf/ILb7L8AaXyQ/d/CffoB&lt;/diagram&gt;&lt;/mxfile&gt;&quot;}"></div>
+                        </li>
+                        <li id="6_2_4"><h4>Decision Table</h4>
+                            <table>
+                                <tr>
+                                    <td>Account Type</td>
+                                    <td>User</td>
+                                    <td>Developer</td>
+                                </tr>
+                                <tr>
+                                    <td>Can access site</td>
+                                    <td>Yes</td>
+                                    <td>Yes</td>
+                                </tr>
+                                <tr>
+                                    <td>Can download program</td>
+                                    <td>Yes</td>
+                                    <td>Yes</td>
+                                </tr>
+                                <tr>
+                                    <td>Can send feedback</td>
+                                    <td>Yes</td>
+                                    <td>Yes</td>
+                                </tr>
+                                <tr>
+                                    <td>Can ask questions</td>
+                                    <td>Yes</td>
+                                    <td>Yes</td>
+                                </tr>
+                                <tr>
+                                    <td>Can push to download server</td>
+                                    <td>No</td>
+                                    <td>Yes</td>
+                                </tr>
+                            </table>
+                        </li>
+                        <li id="6_2_5"><h4>Data Dictionary</h4>
+                            <p>
+                                This is the data dictionary from when there was going to be a backend for the website.
+                            </p>
+                            <table>
+                                <tr>
+                                    <td>Row</td>
+                                    <td>Type</td>
+                                    <td>Size</td>
+                                    <td>Description</td>
+                                    <td>Example</td>
+                                <tr>
+                                    <td><code>id</code></td>
+                                    <td>Integer</td>
+                                    <td>16 bit</td>
+                                    <td>ID of user</td>
+                                    <td>56</td>
+                                </tr>
+                                <tr>
+                                    <td><code>password</code></td>
+                                    <td>String (hashed)</td>
+                                    <td>8 byte</td>
+                                    <td>Hashed password</td>
+                                    <td>password123</td>
+                                </tr>
+                                <tr>
+                                    <td><code>is_administrator</code></td>
+                                    <td>Boolean</td>
+                                    <td>1 bit</td>
+                                    <td>Is the user an admin?</td>
+                                    <td>True</td>
+                                </tr>
+                                <tr>
+                                    <td><code>username</code></td>
+                                    <td>String</td>
+                                    <td>16 byte</td>
+                                    <td>Username</td>
+                                    <td>xXx_ZoMbIe_SlAyEr_xXx</td>
+                                </tr>
+                                <tr>
+                                    <td><code>first_name</code></td>
+                                    <td>String</td>
+                                    <td>16 byte</td>
+                                    <td>First name</td>
+                                    <td>Travis</td>
+                                </tr>
+                                <tr>
+                                    <td><code>last_name</code></td>
+                                    <td>String</td>
+                                    <td>16 byte</td>
+                                    <td>Last name</td>
+                                    <td>Valenti</td>
+                                </tr>
+                                <tr>
+                                    <td><code>email</code></td>
+                                    <td>String</td>
+                                    <td>128 byte</td>
+                                    <td>Email</td>
+                                    <td>ennuuos@gmail.com</td>
+                                </tr>
+                                <tr>
+                                    <td><code>is_developer</code></td>
+                                    <td>Boolean</td>
+                                    <td>1 bit</td>
+                                    <td>Is the user a developer?</td>
+                                    <td>True</td>
+                                </tr>
+                            </table>
+                        </li>
+                        <li id="6_2_6"><h4>Storyboard</h4>
+                            <p>
+                                This is the old storyboard for when the SDD project would be integrated into the site:
+                            </p>
+                            <img src="assets/img/docs/storyboard_old.png">
+                            <p>
+                                This is the new storyboard for the new site:
+                            </p>
+                            <img src="assets/img/docs/storyboard.jpg">
+                        </li>
+                    </ol>
+                </li>
+            </ol>
+        </li>
+    </ol>
+    <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/lyneca/IoT">IoT Core</a> is maintained by <a
+                href="https://github.com/lyneca">lyneca</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a
+                href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a
+                href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+    </footer>
+</section>
+<script type="text/javascript" src="https://www.draw.io/embed2.js?s=flowchart"></script>
+</body>
+</html>
