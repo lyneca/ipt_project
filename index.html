@@ -112,6 +112,12 @@
                         temperature, light, sound, pressure and humidity data, but with the Sense API, the potential
                         for environmental data collection is limitless.
                     </p>
+                    <p class="heading-text">
+                        The example prototype board schematics include extremely accurate (to around 2 places with a
+                        ~0.05 error margin) temperature and pressure sensors, along with sound, humidity, and light
+                        sensors. They have an onboard power regulator and WiFi chip, and are controlled by an Arduino
+                        Nano microprocessor - which means that infinite customisation is at your fingertips.
+                    </p>
                     <h3 class="heading">To those genuinely interested in the product, I apologise.</h3>
                     <p class="heading-text">
                         In reality, this is a school based software assignment involving the marketing of a product.
@@ -257,11 +263,18 @@
         <div class="row">
             <div class="col-md-offset-2 col-md-8">
                 <div>
-                    <h2 class="heading">Portfolio</h2>
                     <p class="heading-text">
-                        <iframe width="853" height="480" src="https://www.youtube.com/embed/D9XH2lIokx8" frameborder="0"
-                                allowfullscreen></iframe>
+                        Sense is built on Python's TK, and all modules are pluggable. Adding sensors is as simple as
+                        this:
                     </p>
+                    <pre style="width:853px">>>>from sense import Sensor
+>>> alcyone = Sensor("192.168.0.4", 80, "Alcyone", "#FF55FF")
+Connecting... Done.
+>>> alcyone.read()
+22.5 600 400.8 1024.0 503.6</pre>
+                    <iframe width="853" height="480" src="https://www.youtube.com/embed/D9XH2lIokx8" frameborder="0"
+                                allowfullscreen></iframe>
+                    <img src="assets/img/sense/graph.png" width=853>
                 </div>
             </div>
         </div>
